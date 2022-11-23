@@ -110,14 +110,12 @@ const Profile = () => {
             "w-full h-full flex justify-center items-center border-r border-solid border-gray-200"
           )}
         >
-          {userProfile.plantType == 5 ? (
+          {userProfile.plantType == 1.1 ? (
             "Tanaman Cabai"
-          ) : userProfile.plantType == 10 ? (
-            "Tanaman Kol"
-          ) : userProfile.plantType == 15 ? (
-            "Tanaman Sawi"
-          ) : userProfile.plantType == 20 ? (
-            "Tanaman Bayam"
+          ) : userProfile.plantType == 1.15 ? (
+            "Tanaman Terong"
+          ) : userProfile.plantType == 0.85 ? (
+            "Tanaman Strawberry"
           ) : userProfile.plantType == null ? (
             <Skeleton height={20} width={100}></Skeleton>
           ) : (

@@ -174,7 +174,7 @@ const Weather = () => {
               <Skeleton height={20} width={100}></Skeleton>
             )
           }
-          name="Kelembapan"
+          name="Kelembapan Udara"
         ></CardIcon>
         <CardIcon
           type="sun-radiation"

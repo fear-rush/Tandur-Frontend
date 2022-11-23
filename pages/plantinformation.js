@@ -53,10 +53,9 @@ const PlantInformationPage = () => {
               autoFocus
               placeholder="..."
             >
-              <option value={5}>Cabai</option>
-              <option value={10}>Kol</option>
-              <option value={15}>Sawi</option>
-              <option value={20}>Bayam</option>
+              <option value={1.1}>Cabai</option>
+              <option value={1.15}>Terong</option>
+              <option value={0.85}>Strawberry</option>
             </select>
             {errors.plantType && (
               <p className="text-red-500 relative -top-5">
