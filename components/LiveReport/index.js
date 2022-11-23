@@ -224,13 +224,13 @@ const LiveReport = ({ data }) => {
               )
             }
             newValue={
-              !liveDataLoading && liveAntaresData[0]?.soilMoisture
-                ? liveAntaresData[0].soilMoisture
+              !liveDataLoading && liveAntaresData[1]?.soilMoisture
+                ? liveAntaresData[1].soilMoisture
                 : `0`
             }
             pastValue={
-              !liveDataLoading && liveAntaresData[1]?.soilMoisture
-                ? liveAntaresData[1].soilMoisture
+              !liveDataLoading && liveAntaresData[0]?.soilMoisture
+                ? liveAntaresData[0].soilMoisture
                 : `0`
             }
             name="Kelembapan Tanah"

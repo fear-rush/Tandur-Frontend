@@ -36,9 +36,11 @@ const Profile = () => {
     getUserData();
   }, []);
 
-  const date_1 = new Date("10/25/2022");
+  const date_1 = new Date(userProfile.dateCreated);
+  console.log(date_1.getTime());
   const date_2 = new Date();
-  const difference = date_1.getTime() - date_2.getTime();
+  console.log(date_2.getTime());
+  const difference = date_1.getTime() - date_2.getTime() + 1000 * 3600 * 24;
   const TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
 
   return (
@@ -63,7 +65,7 @@ const Profile = () => {
             )}
           >
             <Image
-              src="/img/icon/User.svg"
+              src="/img/icon/user.svg"
               alt="profile image"
               height={100}
               width={100}

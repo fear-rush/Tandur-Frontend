@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 
 const Table = ({ data }) => {
   // console.log(`ini data table ${JSON.stringify(data)}`);
@@ -22,9 +23,16 @@ const Table = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data?.map((content, index) => {
+          {data?.map((content, i) => {
+            console.log(data)
             return (
-              <tr className="bg-white border-b  border-gray-200" key={index}>
+              <tr
+              className={clsx(
+                "bg-white border-b  border-gray-200 ",
+                i > data.length - 2 && "hidden"
+              )}
+              key={i}
+            >
                 <th
                   scope="row"
                   className="py-4 px-6  font-medium  text-gray-500 whitespace-nowrap "
@@ -35,7 +43,10 @@ const Table = ({ data }) => {
                   {content.soilMoisture}
                 </td>
 
-                <td className="py-4 px-6 text-gray-500">{content.waterFlow}</td>
+                <td className="py-4 px-6 text-gray-500">  {i == data.length 
+                    ? Math.abs(data[i].waterFlow)
+                    : Math.abs(data[i].waterFlow - data[i + 1]?.waterFlow)}
+               </td>
                 <td className="py-4 px-6 text-gray-500">{content.pumpState}</td>
               </tr>
             );
