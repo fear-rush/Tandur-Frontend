@@ -65,7 +65,7 @@ const Profile = () => {
             )}
           >
             <Image
-              src="/img/icon/user.svg"
+              src="/img/icon/User.svg"
               alt="profile image"
               height={100}
               width={100}
