@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.form-field {
+  @apply w-full drop-shadow-md rounded-md border border-solid border-gray-300 h-10;
+}
+
+.primary-button {
+  @apply w-full text-white bg-green-500 hover:bg-green-600 font-medium rounded-lg text-sm mb-2;
+}
+
+.secondary-button {
+  @apply w-full text-gray-500 bg-white hover:bg-gray-100 font-medium rounded-lg text-sm mb-2;
+}
+
+.payment-button {
+  @apply w-full text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-md text-sm mb-2;
+}
