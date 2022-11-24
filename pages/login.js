@@ -72,7 +72,7 @@ const SignInScreen = () => {
         theme="light"
         className="lg:hidden"
       />
-      <div className="lg:flex justify-between items-center mt-14 container px-10">
+      <div className="lg:flex justify-between items-center mt-14 container">
         <div className="hidden lg:block max-w-[600px]">
           <Image
             src={signInHero}
@@ -135,8 +135,8 @@ const SignInScreen = () => {
                   <div className="text-red-500">{errors.password.message}</div>
                 )}
               </div>
-              <div className="flex justify-between items-center mb-6">
-                <div>
+              <div className="flex justify-end items-center mb-6">
+                {/* <div>
                   <input
                     type="checkbox"
                     {...register("remember")}
@@ -150,7 +150,7 @@ const SignInScreen = () => {
                   >
                     Ingat saya
                   </label>
-                </div>
+                </div> */}
                 <a
                   className="text-green-500 font-medium hover:cursor-pointer text-sm lg:text-base"
                   onClick={() => setPasswordOpen(true)}

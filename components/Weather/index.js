@@ -151,7 +151,7 @@ const Weather = () => {
 
       <div
         className={clsx(
-          "w-full gap-5 container flex-row flex justify-between  "
+          "w-full gap-5 container flex-col lg:flex-row flex justify-between  "
         )}
       >
         <CardIcon

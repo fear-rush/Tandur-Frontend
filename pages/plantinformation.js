@@ -32,7 +32,7 @@ const PlantInformationPage = () => {
 
   return (
     <>
-      <div className="w-[590px] mx-auto bg-white shadow-md border-[1px] rounded-md px-10 py-8 mt-[72px]">
+      <div className="w-3/4 sm:w-[590px] mx-auto bg-white shadow-md border-[1px] rounded-md px-2 py-4 sm:px-10 sm:py-8 mt-[72px]">
         <h1 className="font-extrabold text-2xl text-center mb-[10px]">
           Informasi Tanaman
         </h1>

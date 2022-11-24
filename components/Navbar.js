@@ -49,19 +49,33 @@ const Navbar = () => {
             >
               <Menu.Items className="text-center absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ">
                 <div className="flex flex-col items-center justify-center py-3">
-                  <Menu.Item>
-                    <button
-                      onClick={() => router.replace("/login")}
-                      className="secondary-button !w-24 px-4 py-3"
-                    >
-                      Sign in
-                    </button>
-                  </Menu.Item>
-                  <Menu.Item>
-                    <button className="primary-button !w-24 px-4 py-3 ">
-                      Sign up
-                    </button>
-                  </Menu.Item>
+                  {user ? (
+                    <Menu.Item>
+                      <button
+                        onClick={() => logout()}
+                        className="primary-button   !w-24 px-4 py-3"
+                      >
+                        Log Out
+                      </button>
+                    </Menu.Item>
+                  ) : (
+                    <>
+                      {" "}
+                      <Menu.Item>
+                        <button
+                          onClick={() => router.replace("/login")}
+                          className="secondary-button !w-24 px-4 py-3"
+                        >
+                          Sign in
+                        </button>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <button className="primary-button !w-24 px-4 py-3 ">
+                          Sign up
+                        </button>
+                      </Menu.Item>
+                    </>
+                  )}
                 </div>
               </Menu.Items>
             </Transition>

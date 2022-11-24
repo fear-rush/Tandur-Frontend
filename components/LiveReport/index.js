@@ -210,7 +210,7 @@ const LiveReport = ({ data }) => {
       >
         <div
           className={clsx(
-            "w-full flex mb-4 flex-row overflow-hidden shadow-md  border border-solid border-gray-200 rounded-md "
+            "w-full flex mb-4 flex-col lg:flex-row overflow-hidden shadow-md  border border-solid border-gray-200 rounded-md "
           )}
         >
           <CardBase
